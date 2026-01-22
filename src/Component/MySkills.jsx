@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt 
+  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGitAlt, FaBootstrap 
 } from 'react-icons/fa';
 import { 
-  SiTailwindcss, SiMongodb, SiFirebase, SiExpress, SiVite, SiNetlify, SiVercel 
-} from 'react-icons/si'; // SiVercel ইমপোর্ট করা হয়েছে
+  SiTailwindcss, SiFirebase, SiVite, SiNetlify, SiVercel, SiDaisyui 
+} from 'react-icons/si';
 
 const MySkills = () => {
   const [filter, setFilter] = useState('All');
@@ -17,16 +17,18 @@ const MySkills = () => {
     { name: "JavaScript", icon: <FaJsSquare className="text-yellow-400" />, category: "Front-End", level: "65%" },
     { name: "React", icon: <FaReact className="text-cyan-400" />, category: "Front-End", level: "80%" },
     { name: "Tailwind", icon: <SiTailwindcss className="text-sky-400" />, category: "Front-End", level: "90%" },
+    { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" />, category: "Front-End", level: "85%" },
+    { name: "DaisyUI", icon: <SiDaisyui className="text-emerald-400" />, category: "Front-End", level: "80%" },
     
     // Back-End
-    { name: "Node.js", icon: <FaNodeJs className="text-green-500" />, category: "Back-End", level: "50%" },
-    { name: "Express.js", icon: <SiExpress className="text-slate-600 dark:text-white" />, category: "Back-End", level: "55%" },
+    //{ name: "Node.js", icon: <FaNodeJs className="text-green-500" />, category: "Back-End", level: "50%" },
+    //{ name: "Express.js", icon: <SiExpress className="text-slate-600 dark:text-white" />, category: "Back-End", level: "55%" },
     
     // Database
-    { name: "MongoDB", icon: <SiMongodb className="text-green-600" />, category: "Database", level: "60%" },
+    //{ name: "MongoDB", icon: <SiMongodb className="text-green-600" />, category: "Database", level: "60%" },
     { name: "Firebase", icon: <SiFirebase className="text-yellow-500" />, category: "Database", level: "75%" },
     
-    // Tools (Vercel যুক্ত করা হয়েছে)
+    // Tools 
     { name: "Git", icon: <FaGitAlt className="text-red-500" />, category: "Tools", level: "85%" },
     { name: "Vite", icon: <SiVite className="text-purple-500" />, category: "Tools", level: "90%" },
     { name: "Vercel", icon: <SiVercel className="text-slate-900 dark:text-white" />, category: "Tools", level: "90%" },
@@ -71,43 +73,58 @@ const MySkills = () => {
           ))}
         </div>
 
-        {/* Skills Grid */}
-        <motion.div layout className="grid max-w-6xl grid-cols-2 gap-8 mx-auto md:grid-cols-3 lg:grid-cols-4">
+        {/* Skills Grid or Empty Message */}
+        <motion.div layout className="max-w-6xl mx-auto">
           <AnimatePresence mode='popLayout'>
-            {filteredSkills.map((skill) => (
-              <motion.div
-                layout
-                key={skill.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-xl border 
-                border-slate-100 dark:border-slate-700 group hover:border-indigo-500 transition-all relative"
-              >
-                {/* Percentage Display */}
-                <div className="absolute text-xl italic font-extrabold text-indigo-600 top-5 right-7">
-                  {skill.level}
-                </div>
+            {filteredSkills.length > 0 ? (
+              <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+                {filteredSkills.map((skill) => (
+                  <motion.div
+                    layout
+                    key={skill.name}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-xl border 
+                    border-slate-100 dark:border-slate-700 group hover:border-indigo-500 transition-all relative"
+                  >
+                    <div className="absolute text-xl italic font-extrabold text-indigo-600 top-5 right-7">
+                      {skill.level}
+                    </div>
 
-                <div className="mb-4 text-6xl transition-transform duration-300 group-hover:scale-110">
-                  {skill.icon}
-                </div>
-                
-                <h3 className="mb-1 text-xl font-bold text-slate-800 dark:text-white">{skill.name}</h3>
-                <p className="mb-4 text-xs font-semibold tracking-widest uppercase text-slate-400">{skill.category}</p>
-                
-                {/* Visual Progress Bar */}
-                <div className="w-full h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    whileInView={{ width: skill.level }} // স্ক্রল করলে এনিমেট হবে
-                    viewport={{ once: false }}
-                    transition={{ duration: 1.2, ease: "easeOut" }}
-                    className="h-full bg-indigo-600 rounded-full"
-                  />
+                    <div className="mb-4 text-6xl transition-transform duration-300 group-hover:scale-110">
+                      {skill.icon}
+                    </div>
+                    
+                    <h3 className="mb-1 text-xl font-bold text-slate-800 dark:text-white">{skill.name}</h3>
+                    <p className="mb-4 text-xs font-semibold tracking-widest uppercase text-slate-400">{skill.category}</p>
+                    
+                    <div className="w-full h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: skill.level }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        className="h-full bg-indigo-600 rounded-full"
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              // empty massage
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="py-12 text-center"
+              >
+                <div className="inline-block p-6 bg-white border shadow-md dark:bg-slate-800 rounded-2xl border-slate-100 dark:border-slate-700">
+                   <p className="text-lg italic font-medium text-slate-500 dark:text-slate-400">
+                    Currently learning and exploring these technologies. Stay tuned, amazing skills are coming soon! 🚀
+                  </p>
                 </div>
               </motion.div>
-            ))}
+            )}
           </AnimatePresence>
         </motion.div>
 
