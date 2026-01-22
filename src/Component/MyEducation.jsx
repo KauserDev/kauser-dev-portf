@@ -14,20 +14,27 @@ const educationData = [
     degree: "Secondary School Certificate (SSC)",
     institute: "Border Guard Public School & Collage, Rangpur.",
     description: "Completed secondary education with a focus on Science subjects."
-  }
+  },
+  {
+    year: "sept,25 - Dec,25",
+    degree: "Attachment Web Development",
+    institute: "E-Learning & Earning Ltd.",
+    description: "Web Design & Development."
+  },
+
 ];
 
 const MyEducation = () => {
   return (
-    <section id="education" className="py-20 bg-slate-50 dark:bg-slate-900 transition-colors duration-500">
-      <div className="container mx-auto px-6">
+    <section id="education" className="py-20 transition-colors duration-500 bg-slate-50 dark:bg-slate-900">
+      <div className="container px-6 mx-auto">
         
         {/* Section Title */}
-        <div className="text-center mb-16">
+        <div className="mb-16 text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4"
+            className="mb-4 text-3xl font-bold md:text-5xl text-slate-900 dark:text-white"
           >
             My <span className="text-indigo-600">Education</span>
           </motion.h2>
@@ -35,9 +42,9 @@ const MyEducation = () => {
         </div>
 
         {/* Timeline Container */}
-        <div className="max-w-4xl mx-auto relative">
+        <div className="relative max-w-4xl mx-auto">
           {/* Vertical Line */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-slate-200 dark:bg-slate-800" />
+          <div className="absolute left-0 w-1 h-full transform md:left-1/2 md:-translate-x-1/2 bg-slate-200 dark:bg-slate-800" />
 
           <div className="space-y-12">
             {educationData.map((edu, index) => (
@@ -51,24 +58,24 @@ const MyEducation = () => {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-10 h-10 bg-indigo-600 rounded-full border-4 border-white dark:border-slate-900 flex items-center justify-center z-10 shadow-lg">
-                  <FaGraduationCap className="text-white text-lg" />
+                <div className="absolute left-0 z-10 flex items-center justify-center w-10 h-10 transform -translate-x-1/2 bg-indigo-600 border-4 border-white rounded-full shadow-lg md:left-1/2 dark:border-slate-900">
+                  <FaGraduationCap className="text-lg text-white" />
                 </div>
 
                 {/* Content Box */}
-                <div className="w-full md:w-5/12 ml-12 md:ml-0 bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-white/5 hover:border-indigo-500/50 transition-all">
-                  <span className="text-indigo-600 font-bold text-sm bg-indigo-50 dark:bg-indigo-900/30 px-4 py-1 rounded-full">
+                <div className="w-full p-8 ml-12 transition-all bg-white border shadow-xl md:w-5/12 md:ml-0 dark:bg-slate-800 rounded-3xl border-slate-100 dark:border-white/5 hover:border-indigo-500/50">
+                  <span className="px-4 py-1 text-sm font-bold text-indigo-600 rounded-full bg-indigo-50 dark:bg-indigo-900/30">
                     {edu.year}
                   </span>
-                  <h3 className="text-xl font-bold text-slate-800 dark:text-white mt-4">{edu.degree}</h3>
-                  <p className="text-indigo-500 font-semibold mb-3">{edu.institute}</p>
-                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <h3 className="mt-4 text-xl font-bold text-slate-800 dark:text-white">{edu.degree}</h3>
+                  <p className="mb-3 font-semibold text-indigo-500">{edu.institute}</p>
+                  <p className="leading-relaxed text-slate-600 dark:text-slate-400">
                     {edu.description}
                   </p>
                 </div>
 
                 {/* Empty Space for Desktop View */}
-                <div className="hidden md:block w-5/12" />
+                <div className="hidden w-5/12 md:block" />
               </motion.div>
             ))}
           </div>
