@@ -31,8 +31,18 @@ const Project = () => {
       githubLink: "https://github.com/KauserDev/dragon-news",
       description: "Daily news portal with category-wise filtering."
     },
+    {
+      id: 3,
+      title: "Multivendor Agricultural E-commerce Platform",
+      category: "Full Stack",
+      image: "https://i.ibb.co.com/wNXXRHmP/Screenshot-2026-01-29-142902.png",
+      tags: ["React", "Firebase", "Cloudenary"],
+      liveLink: "https://krishok-bazar.vercel.app/",
+      githubLink: "https://github.com/KauserDev/krishok-bazar",
+      description: "It is a one-stop digital solution created for the farmers of Bangladesh. If it grows in the future, people will be able to buy fresh produce directly from the village at home."
+    },
     // {
-    //   id: 3,
+    //   id: 4,
     //   title: "Server Side Logic",
     //   category: "Back-End",
     //   image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=500&q=80",
@@ -42,7 +52,7 @@ const Project = () => {
     //   description: "Robust API development and server management."
     // },
     // {
-    //   id: 4,
+    //   id: 5,
     //   title: "School Management System",
     //   category: "Full Stack",
     //   image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&q=80",
@@ -52,7 +62,7 @@ const Project = () => {
     //   description: "A complete solution for managing students and teachers data."
     // },
     // {
-    //   id: 5,
+    //   id: 6,
     //   title: "Inventory Database",
     //   category: "Database",
     //   image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
