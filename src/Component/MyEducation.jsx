@@ -10,7 +10,7 @@ const educationData = [
     description: "Focusing on core computer science subjects, web development, and software engineering principles."
   },
   {
-    year: "2019 - 2021",
+    year: "2019 - 2020",
     degree: "Secondary School Certificate (SSC)",
     institute: "Border Guard Public School & Collage, Rangpur.",
     description: "Completed secondary education with a focus on Science subjects."
