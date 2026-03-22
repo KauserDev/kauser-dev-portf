@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedinIn, FaDiscord, FaDownload, FaEnvelope, FaWhatsapp } from 'react-icons/fa'; // FaWhatsapp ইম্পোর্ট করা হয়েছে
+import { FaGithub, FaLinkedinIn, FaDiscord, FaDownload, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 import { Link } from 'react-scroll'; 
 import heroImg from '../assets/Hero.png';
@@ -15,7 +15,7 @@ const Heros = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-500">
+    <section id="home" className="relative flex items-center min-h-screen overflow-hidden transition-colors duration-500 bg-white dark:bg-slate-950">
       
       {/* Background Glows */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/10 
@@ -23,28 +23,27 @@ const Heros = () => {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 
       dark:bg-purple-500/20 blur-[120px] rounded-full -ml-64 -mb-64" />
 
-      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container relative z-10 grid items-center grid-cols-1 gap-12 px-6 mx-auto lg:grid-cols-2">
         
         {/* Left Content */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-left order-2 lg:order-1"
+          className="order-2 text-left lg:order-1"
         >
-          <h1 className="text-xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4 leading-tight">
+          <h1 className="mb-4 text-xl font-bold leading-tight md:text-3xl text-slate-900 dark:text-white">
             Hi, My Name is <br />
-            <span className="text-transparent text-5xl md:text-7xl bg-clip-text 
-            bg-gradient-to-r from-indigo-500 to-purple-500">
+            <span className="text-5xl text-transparent md:text-7xl bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">
               Kauser Hossen
             </span>
           </h1>
 
-          <h2 className="text-2xl md:text-4xl font-semibold text-slate-800 dark:text-slate-200 mb-6">
+          <h2 className="mb-6 text-2xl font-semibold md:text-4xl text-slate-800 dark:text-slate-200">
             And I'm a {' '}
             <span className="text-indigo-500">
               <Typewriter
-                words={['Front-end Developer', 'UI/UX Expert', 'React.js Developer']}
+                words={['Data Analyst', 'Power BI Expert', 'SQL Developer', 'Web Enthusiast']}
                 loop={0}
                 cursor
                 cursorStyle='|'
@@ -55,9 +54,9 @@ const Heros = () => {
             </span>
           </h2>
 
-          <p className="text-slate-600 dark:text-gray-400 text-lg mb-8 max-w-xl leading-relaxed">
-            Passionate about crafting dynamic and user-friendly web solutions with a perfect blend of 
-            design and functionality. I bring ideas to life through clean code and creative design.
+          <p className="max-w-xl mb-8 text-lg leading-relaxed text-slate-600 dark:text-gray-400">
+            Professionally driven by data insights using <strong>Excel, SQL, and Power BI</strong>. 
+            I also enjoy crafting interactive web experiences, blending analytical precision with creative development.
           </p>
 
           {/* Button Group */}
@@ -85,7 +84,7 @@ const Heros = () => {
             </Link>
           </div>
 
-          {/* Social Links - WhatsApp সহ */}
+          {/* Social Links */}
           <div className="flex gap-4">
             {socialLinks.map((social, index) => (
               <motion.a
@@ -94,10 +93,7 @@ const Heros = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 flex items-center justify-center rounded-lg bg-slate-100 
-                dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 
-                dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-600 
-                hover:border-indigo-600 transition-all shadow-sm"
+                className="flex items-center justify-center transition-all border rounded-lg shadow-sm w-11 h-11 bg-slate-100 dark:bg-white/5 border-slate-200 dark:border-white/10 text-slate-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-600 hover:border-indigo-600"
               >
                 {social.icon}
               </motion.a>
@@ -110,7 +106,7 @@ const Heros = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative flex justify-center items-center order-1 lg:order-2"
+          className="relative flex items-center justify-center order-1 lg:order-2"
         >
           <motion.div
             animate={{ rotate: 360 }}
@@ -119,12 +115,11 @@ const Heros = () => {
             border-t-indigo-500 border-b-purple-500 rounded-full"
           />
 
-          <div className="relative w-64 h-64 md:w-80 md:h-80 bg-slate-200 dark:bg-slate-800 rounded-full 
-          overflow-hidden border-4 border-white dark:border-slate-900 shadow-2xl">
+          <div className="relative w-64 h-64 overflow-hidden border-4 border-white rounded-full shadow-2xl md:w-80 md:h-80 bg-slate-200 dark:bg-slate-800 dark:border-slate-900">
             <img 
               src={heroImg}
               alt="Kauser Hossen"
-              className="w-full h-full object-cover"
+              className="object-cover w-full h-full"
             />
           </div>
           <div className="absolute -z-10 w-full h-full bg-indigo-500/20 blur-[80px] rounded-full" />

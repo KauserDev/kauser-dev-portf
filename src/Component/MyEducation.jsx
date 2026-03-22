@@ -16,11 +16,17 @@ const educationData = [
     description: "Completed secondary education with a focus on Science subjects."
   },
   {
-    year: "sept,25 - Dec,25",
+    year: "Sept,25 - Dec,25",
     degree: "Attachment Web Development",
     institute: "E-Learning & Earning Ltd.",
     description: "Web Design & Development."
   },
+  {
+    year: "Jan,26 - Jun,26",
+    degree: "Data Analytics",
+    institute: "Ostad.",
+    description: "Data Analytics Job Ready Program."
+  }
 
 ];
 

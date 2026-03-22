@@ -31,7 +31,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-slate-950 pt-16 pb-8 px-6 overflow-hidden">
+    <footer className="relative px-6 pt-16 pb-8 overflow-hidden bg-slate-950">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] 
       bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
       
@@ -42,27 +42,27 @@ const Footer = () => {
         viewport={{ once: true, amount: 0.24 }}
         className="max-w-6xl mx-auto"
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12 text-center md:text-left">
+        <div className="grid grid-cols-1 gap-10 mb-12 text-center sm:grid-cols-2 lg:grid-cols-3 md:text-left">
           
           {/* Logo Section */}
-          <motion.div variants={fadeInUp} className="flex flex-col items-center md:items-start space-y-4">
+          <motion.div variants={fadeInUp} className="flex flex-col items-center space-y-4 md:items-start">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 flex items-center justify-center font-bold text-white 
-              bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl shadow-lg">
+              <div className="flex items-center justify-center w-10 h-10 font-bold text-white shadow-lg bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl">
                 KH.
               </div>
               <span className="text-2xl font-bold tracking-tight text-white">
                 Kauser<span className="text-indigo-500">.dev</span>
               </span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
-              A professional front-end developer. I help you create modern and responsive websites.
+            <p className="max-w-xs mx-auto text-sm leading-relaxed text-gray-400 md:mx-0">
+              Expert in Data Analytics (SQL, Power BI, Excel) and Front-end Development. 
+              Helping businesses grow through data-driven solutions and modern web design.
             </p>
           </motion.div>
 
           {/* Quick Links */}
           <motion.div variants={fadeInUp} className="flex flex-col items-center">
-            <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
             <ul className="grid grid-cols-2 gap-x-8 gap-y-2 md:flex md:flex-col md:gap-3">
               {['Home', 'About', 'Service', 'Skills', 'Education', 'Contact'].map((item) => (
                 <li key={item}>
@@ -70,7 +70,7 @@ const Footer = () => {
                     to={item.toLowerCase()}
                     smooth={true}
                     duration={500}
-                    className="text-gray-400 hover:text-indigo-500 cursor-pointer transition-colors text-sm"
+                    className="text-sm text-gray-400 transition-colors cursor-pointer hover:text-indigo-500"
                   >
                     {item}
                   </Link>
@@ -81,7 +81,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <motion.div variants={fadeInUp} className="flex flex-col items-center md:items-end">
-            <h3 className="text-white font-semibold text-lg mb-4">Stay Connected</h3>
+            <h3 className="mb-4 text-lg font-semibold text-white">Stay Connected</h3>
             <div className="flex flex-wrap justify-center gap-4 mb-4">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -91,40 +91,36 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border 
-                  border-white/10 text-gray-400 hover:bg-indigo-600 hover:text-white 
-                  transition-all duration-300 shadow-sm"
+                  className="flex items-center justify-center w-10 h-10 text-gray-400 transition-all duration-300 border rounded-full shadow-sm bg-white/5 border-white/10 hover:bg-indigo-600 hover:text-white"
                 >
                   {social.icon}
                 </motion.a>
               ))}
             </div>
-            <p className="text-gray-500 text-xs md:text-sm">Email: kauserhossendev@gmail.com</p>
+            <p className="text-xs text-gray-500 md:text-sm">Email: kauserhossendev@gmail.com</p>
           </motion.div>
         </div>
 
         {/* Bottom Section */}
         <motion.div 
           variants={fadeInUp}
-          className="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6"
+          className="flex flex-col items-center justify-between gap-6 pt-8 border-t border-white/5 sm:flex-row"
         >
-          <p className="text-gray-500 text-xs md:text-sm text-center">
-            © {currentYear} <span className="text-indigo-500 font-medium">Kauser Hossen</span>. All rights reserved.
+          <p className="text-xs text-center text-gray-500 md:text-sm">
+            © {currentYear} <span className="font-medium text-indigo-500">Kauser Hossen</span>. All rights reserved.
           </p>
           
           <Link
             to="home"
             smooth={true}
             duration={800}
-            className="group flex items-center gap-2 text-gray-400 hover:text-indigo-500 
-            cursor-pointer transition-all"
+            className="flex items-center gap-2 text-gray-400 transition-all cursor-pointer group hover:text-indigo-500"
           >
             <span className="text-sm font-medium">Back to Top</span>
             <motion.div
               animate={{ y: [0, -5, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
-              className="w-8 h-8 flex items-center justify-center rounded-full 
-              bg-white/5 group-hover:bg-indigo-500 transition-all"
+              className="flex items-center justify-center w-8 h-8 transition-all rounded-full bg-white/5 group-hover:bg-indigo-500"
             >
              <FaArrowUp className="text-xs group-hover:text-white" />
             </motion.div>

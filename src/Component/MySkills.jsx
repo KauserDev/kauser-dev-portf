@@ -1,41 +1,41 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGitAlt, FaBootstrap 
+  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGitAlt, FaBootstrap, FaDatabase, FaFileExcel 
 } from 'react-icons/fa';
 import { 
-  SiTailwindcss, SiFirebase, SiVite, SiNetlify, SiVercel, SiDaisyui 
+  SiTailwindcss, SiFirebase, SiVite, SiNetlify, SiVercel 
 } from 'react-icons/si';
 
 const MySkills = () => {
   const [filter, setFilter] = useState('All');
 
   const skills = [
-    // Front-End
+    // --- Data Analysis ---
+    { name: "Excel", icon: <FaFileExcel className="text-green-600" />, category: "Data Analysis", level: "90%" },
+    { name: "Power BI", icon: <FaDatabase className="text-yellow-500" />, category: "Data Analysis", level: "85%" },
+    { name: "SQL", icon: <FaDatabase className="text-blue-500" />, category: "Data Analysis", level: "75%" },
+
+    // --- Front-End ---
     { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, category: "Front-End", level: "95%" },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, category: "Front-End", level: "90%" },
     { name: "JavaScript", icon: <FaJsSquare className="text-yellow-400" />, category: "Front-End", level: "65%" },
     { name: "React", icon: <FaReact className="text-cyan-400" />, category: "Front-End", level: "80%" },
     { name: "Tailwind", icon: <SiTailwindcss className="text-sky-400" />, category: "Front-End", level: "90%" },
     { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" />, category: "Front-End", level: "85%" },
-    { name: "DaisyUI", icon: <SiDaisyui className="text-emerald-400" />, category: "Front-End", level: "80%" },
+    { name: "DaisyUI", icon: <div className="text-3xl font-bold text-emerald-400">D</div>, category: "Front-End", level: "80%" },
     
-    // Back-End
-    //{ name: "Node.js", icon: <FaNodeJs className="text-green-500" />, category: "Back-End", level: "50%" },
-    //{ name: "Express.js", icon: <SiExpress className="text-slate-600 dark:text-white" />, category: "Back-End", level: "55%" },
-    
-    // Database
-    //{ name: "MongoDB", icon: <SiMongodb className="text-green-600" />, category: "Database", level: "60%" },
+    // --- Database ---
     { name: "Firebase", icon: <SiFirebase className="text-yellow-500" />, category: "Database", level: "75%" },
     
-    // Tools 
+    // --- Tools ---
     { name: "Git", icon: <FaGitAlt className="text-red-500" />, category: "Tools", level: "85%" },
     { name: "Vite", icon: <SiVite className="text-purple-500" />, category: "Tools", level: "90%" },
     { name: "Vercel", icon: <SiVercel className="text-slate-900 dark:text-white" />, category: "Tools", level: "90%" },
     { name: "Netlify", icon: <SiNetlify className="text-cyan-500" />, category: "Tools", level: "85%" },
   ];
 
-  const categories = ['All', 'Front-End', 'Back-End', 'Database', 'Tools'];
+  const categories = ['All', 'Data Analysis', 'Front-End', 'Database', 'Tools'];
 
   const filteredSkills = filter === 'All' 
     ? skills 
@@ -73,7 +73,7 @@ const MySkills = () => {
           ))}
         </div>
 
-        {/* Skills Grid or Empty Message */}
+        {/* Skills Grid */}
         <motion.div layout className="max-w-6xl mx-auto">
           <AnimatePresence mode='popLayout'>
             {filteredSkills.length > 0 ? (
@@ -85,8 +85,7 @@ const MySkills = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
-                    className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-xl border 
-                    border-slate-100 dark:border-slate-700 group hover:border-indigo-500 transition-all relative"
+                    className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-xl border border-slate-100 dark:border-slate-700 group hover:border-indigo-500 transition-all relative"
                   >
                     <div className="absolute text-xl italic font-extrabold text-indigo-600 top-5 right-7">
                       {skill.level}
@@ -112,7 +111,6 @@ const MySkills = () => {
                 ))}
               </div>
             ) : (
-              // empty massage
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -120,7 +118,7 @@ const MySkills = () => {
               >
                 <div className="inline-block p-6 bg-white border shadow-md dark:bg-slate-800 rounded-2xl border-slate-100 dark:border-slate-700">
                    <p className="text-lg italic font-medium text-slate-500 dark:text-slate-400">
-                    Currently learning and exploring these technologies. Stay tuned, amazing skills are coming soon! 🚀
+                    Currently learning and exploring these technologies. Stay tuned! 🚀
                   </p>
                 </div>
               </motion.div>

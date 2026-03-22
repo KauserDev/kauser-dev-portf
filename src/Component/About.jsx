@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import aboutImg from '../assets/Hero.png';
-import { FaBolt } from 'react-icons/fa'; // frist develop bujhate
+import { FaBolt, FaDatabase } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -48,39 +48,42 @@ const About = () => {
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold md:text-3xl text-slate-800 dark:text-slate-100">
-              I'm a Passionate <span className="text-indigo-500">Front-End Developer</span>
+              Data Driven <span className="text-indigo-500">Professional</span> & Web Enthusiast
             </h3>
             
             <p className="text-lg leading-relaxed text-justify text-slate-600 dark:text-gray-400">
-              Hello! I'm Kauser Hossen, a web developer who loves building clean, interactive, and user-centric websites. 
-              My journey in web development started with a curiosity about how things work on the internet, 
-              which turned into a career where I focus on crafting high-quality digital experiences.
-            </p>
-
-            {/* AI-Driven Development Highlight */}
-            <p className="text-lg leading-relaxed text-justify text-slate-600 dark:text-gray-400">
-              I am a forward-thinking developer who leverages the power of <span className="italic font-semibold text-indigo-600">AI-driven development</span>. 
-              By integrating modern AI tools into my workflow, I can solve complex problems and build feature-rich 
-              applications with <span className="font-medium text-slate-800 dark:text-slate-200">exceptional speed and precision</span> without compromising on code quality.
+              Hello! I'm Kauser Hossen. Professionally, I specialize in data management and visualization using 
+              <span className="font-semibold text-slate-800 dark:text-white"> Excel, SQL, and Power BI</span>. 
+              I am passionate about turning raw data into meaningful insights that help in making better business decisions.
             </p>
 
             <p className="text-lg leading-relaxed text-justify text-slate-600 dark:text-gray-400">
-              I specialize in <span className='font-medium'>React.js, Tailwind CSS, and JavaScript</span>. 
-              My goal is to always deliver code that is not only efficient but also maintainable and scalable.
+              Beyond my core profession, I have a deep interest in web development. I enjoy building 
+              interactive front-end experiences using <span className="font-medium">React.js and Tailwind CSS</span>. 
+              To maintain high efficiency, I often leverage <span className="italic font-semibold text-indigo-600">AI-driven development tools</span>, 
+              allowing me to deliver functional web solutions with remarkable speed.
+            </p>
+
+            <p className="text-lg leading-relaxed text-justify text-slate-600 dark:text-gray-400">
+              My unique combination of data expertise and web development skills allows me to approach problems 
+              with both analytical precision and creative technicality.
             </p>
 
             {/* Stats/Info Grid */}
             <div className="grid grid-cols-2 gap-6 pt-4">
               <div className="p-4 border shadow-sm rounded-xl bg-slate-50 dark:bg-slate-900 border-slate-100 dark:border-slate-800">
-                <p className="text-2xl font-bold text-indigo-600">10+</p>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Projects Completed</p>
+                <div className="flex items-center gap-2">
+                   <p className="text-2xl font-bold text-indigo-600">Data</p>
+                   <FaDatabase className="text-xl text-indigo-500" />
+                </div>
+                <p className="text-sm text-slate-500 dark:text-slate-400">SQL & Power BI Expert</p>
               </div>
               <div className="p-4 border shadow-sm rounded-xl bg-slate-50 dark:bg-slate-900 border-slate-100 dark:border-slate-800">
                 <div className="flex items-center gap-2">
                    <p className="text-2xl font-bold text-indigo-600">Fast</p>
                    <FaBolt className="text-yellow-500" />
                 </div>
-                <p className="text-sm text-slate-500 dark:text-slate-400">AI-Powered Delivery</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">AI-Powered Web Dev</p>
               </div>
             </div>
 
@@ -92,7 +95,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 >
                 <button className="px-8 py-3 font-bold text-white transition-all bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-700 active:scale-95">
-                    Hire Me
+                    Contact Me
                 </button>
                </a>
             </div>

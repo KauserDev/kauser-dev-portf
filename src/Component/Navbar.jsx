@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import { FaFileDownload } from 'react-icons/fa'; 
 import MyResume from '../assets/KAUSER HOSSEN.pdf';
 
+
 // menu bar
 const menuItems = [
   { name: 'Home', to: 'home' },

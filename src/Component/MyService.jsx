@@ -1,34 +1,34 @@
 import { motion } from 'framer-motion';
-import { FaCode, FaPaintBrush, FaMobileAlt, FaRobot } from 'react-icons/fa'; // FaRobot add hoyeche
+import { FaDatabase, FaChartBar, FaCode, FaRobot, FaTable } from 'react-icons/fa';
 
 const services = [
   {
     id: 1,
-    icon: <FaCode className="text-4xl" />,
-    title: "Web Development",
-    description: "Building responsive and high-performance websites using React.js, Tailwind CSS, and modern web technologies.",
-    color: "from-blue-500 to-indigo-600"
+    icon: <FaChartBar className="text-4xl" />,
+    title: "Data Visualization",
+    description: "Creating interactive and insightful dashboards using Power BI and Excel to transform complex data into clear business stories.",
+    color: "from-yellow-500 to-orange-600"
   },
   {
     id: 2,
-    icon: <FaPaintBrush className="text-4xl" />,
-    title: "UI/UX Design",
-    description: "Designing clean and user-friendly interfaces that provide a great user experience and visual appeal.",
-    color: "from-purple-500 to-pink-600"
+    icon: <FaDatabase className="text-4xl" />,
+    title: "SQL & DB Management",
+    description: "Writing efficient SQL queries for data extraction, manipulation, and managing databases to ensure data integrity and accessibility.",
+    color: "from-blue-600 to-indigo-700"
   },
   {
     id: 3,
-    icon: <FaMobileAlt className="text-4xl" />,
-    title: "Responsive Design",
-    description: "Ensuring your website looks perfect on all devices, including mobile phones, tablets, and desktops.",
-    color: "from-emerald-500 to-teal-600"
+    icon: <FaTable className="text-4xl" />,
+    title: "Advanced Data Analysis",
+    description: "Utilizing Microsoft Excel's advanced features for data cleaning, complex calculations, and reporting to drive decision-making.",
+    color: "from-green-600 to-emerald-700"
   },
   {
     id: 4,
-    icon: <FaRobot className="text-4xl" />,
-    title: "AI-Powered Dev",
-    description: "Utilizing AI tools to accelerate coding, debugging, and project delivery with maximum precision and speed.",
-    color: "from-orange-500 to-red-600"
+    icon: <FaCode className="text-4xl" />,
+    title: "Web Enthusiast Dev",
+    description: "Building modern and functional web interfaces with React.js and Tailwind CSS, optimized with AI-driven development tools.",
+    color: "from-indigo-500 to-purple-600"
   }
 ];
 
@@ -49,7 +49,7 @@ const MyService = () => {
           </motion.h2>
           <div className="w-24 h-1.5 bg-indigo-600 mx-auto rounded-full" />
           <p className="max-w-2xl mx-auto mt-4 text-slate-600 dark:text-slate-400">
-            I provide high-quality services leveraging modern tools and AI to help you build your digital presence faster.
+            Providing expert data solutions and modern web experiences to help businesses make informed, data-driven decisions.
           </p>
         </div>
 
