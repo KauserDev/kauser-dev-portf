@@ -95,7 +95,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 >
                 <button className="px-8 py-3 font-bold text-white transition-all bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-700 active:scale-95">
-                    Contact Me
+                    Hire Me
                 </button>
                </a>
             </div>
