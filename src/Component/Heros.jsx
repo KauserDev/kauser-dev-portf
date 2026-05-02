@@ -43,7 +43,7 @@ const Heros = () => {
             And I'm a {' '}
             <span className="text-indigo-500">
               <Typewriter
-                words={['Data Analyst', 'Power BI Expert', 'SQL Developer', 'Web Enthusiast']}
+                words={['Data Analyst', 'BI Professional', 'Database Queries', 'Web Enthusiast']}
                 loop={0}
                 cursor
                 cursorStyle='|'

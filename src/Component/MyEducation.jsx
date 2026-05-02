@@ -22,7 +22,7 @@ const educationData = [
     description: "Web Design & Development."
   },
   {
-    year: "Jan,26 - Jun,26",
+    year: "Feb,26 - Jul,26",
     degree: "Data Analytics",
     institute: "Ostad.",
     description: "Data Analytics Job Ready Program."
