@@ -33,7 +33,7 @@ const Heros = () => {
           className="order-2 text-left lg:order-1"
         >
           <h1 className="mb-4 text-xl font-bold leading-tight md:text-3xl text-slate-900 dark:text-white">
-            Hi, My Name is <br />
+            Assalamu Alaikum, My Name is <br />
             <span className="text-5xl text-transparent md:text-7xl bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">
               Kauser Hossen
             </span>
@@ -55,8 +55,9 @@ const Heros = () => {
           </h2>
 
           <p className="max-w-xl mb-8 text-lg leading-relaxed text-slate-600 dark:text-gray-400">
-            Professionally driven by data insights using <strong>Excel, SQL, and Power BI</strong>. 
-            I also enjoy crafting interactive web experiences, blending analytical precision with creative development.
+            Turning complex data into actionable insights with <strong>Excel, SQL, and Power BI</strong>. 
+            As a Data Analyst, I combine analytical precision with a foundational knowledge of 
+            web technologies to deliver comprehensive digital solutions.
           </p>
 
           {/* Button Group */}

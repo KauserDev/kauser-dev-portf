@@ -48,25 +48,25 @@ const About = () => {
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold md:text-3xl text-slate-800 dark:text-slate-100">
-              Data Driven <span className="text-indigo-500">Professional</span> & Web Enthusiast
+              Data Analyst | <span className="text-indigo-500">Dedicated to Data-Driven Excellence</span>
             </h3>
             
             <p className="text-lg leading-relaxed text-justify text-slate-600 dark:text-gray-400">
-              Hello! I'm Kauser Hossen. Professionally, I specialize in data management and visualization using 
+              Assalamu Alaikum! I'm <span className="font-semibold text-slate-800 dark:text-white">Kauser Hossen</span>. 
+              Professionally, I am a dedicated Data Analyst specializing in data management, processing, and visualization using 
               <span className="font-semibold text-slate-800 dark:text-white"> Excel, SQL, and Power BI</span>. 
-              I am passionate about turning raw data into meaningful insights that help in making better business decisions.
+              My core focus is on transforming complex datasets into actionable insights that drive strategic business decisions.
             </p>
 
             <p className="text-lg leading-relaxed text-justify text-slate-600 dark:text-gray-400">
-              Beyond my core profession, I have a deep interest in web development. I enjoy building 
-              interactive front-end experiences using <span className="font-medium">React.js and Tailwind CSS</span>. 
-              To maintain high efficiency, I often leverage <span className="italic font-semibold text-indigo-600">AI-driven development tools</span>, 
-              allowing me to deliver functional web solutions with remarkable speed.
+              While my primary career is built around Data Analytics, I also possess a foundational knowledge of web technologies for personal projects. 
+              I enjoy exploring front-end development using <span className="font-medium">React.js and Tailwind CSS</span> to enhance my digital skills and maintain 
+              a modern approach to presenting information.
             </p>
 
             <p className="text-lg leading-relaxed text-justify text-slate-600 dark:text-gray-400">
-              My unique combination of data expertise and web development skills allows me to approach problems 
-              with both analytical precision and creative technicality.
+              I am committed to excellence in data storytelling, combining an analytical mindset with technical precision 
+              to deliver impactful and data-driven results.
             </p>
 
             {/* Stats/Info Grid */}
