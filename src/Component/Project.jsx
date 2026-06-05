@@ -41,31 +41,41 @@ const Project = () => {
       id: 4,
       title: "Business Insights Dashboard",
       category: "Data Analysis",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
-      tags: ["Power BI", "SQL", "Excel"],
-      liveLink: "#",
+      image: "https://s2.imgbb.ws/file/storage-sv2/xzv6m.png",
+      tags: ["Power BI", "Excel"],
+      liveLink: "https://www.linkedin.com/feed/update/urn:li:activity:7467101397155561472/",
       githubLink: "#",
       description: "Interactive data visualization and business intelligence solution using Power BI."
     },
     {
       id: 5,
-      title: "Sales Analysis Dashboard",
+      title: "Marketing Analytics Dashboard",
       category: "Data Analysis",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
-      tags: ["Power BI", "Excel", "SQL"],
-      liveLink: "#",
+      image: "https://s1.imgbb.ws/file/storage-sv1/xzvwG.png",
+      tags: ["Power BI", "Excel", "SQL", "PostgreSQL"],
+      liveLink: "https://www.linkedin.com/posts/kauserdev_marketinganalytics-sql-powerbi-ugcPost-7468253178233470976-_Y-v/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF8lyMIBGO4x0YTvrvcWKWwKAajagdEIQks",
       githubLink: "#",
       description: "Business intelligence dashboard focusing on sales growth and regional performance."
     },
     {
       id: 6,
-      title: "Inventory Management System",
+      title: "Building and Optimizing Relational Database Queries",
       category: "Database",
-      image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=500&q=80",
+      image: "https://www.mysql.com/common/images/products/MySQL_Workbench_Editor_General_Mac.png",
       tags: ["SQL", "MySQL", "Relational DB"],
-      liveLink: "#",
+      liveLink: "https://www.linkedin.com/feed/update/urn:li:activity:7461694338616442880/",
       githubLink: "#",
       description: "Complex SQL database design for managing stock, orders, and suppliers."
+    },
+    {
+      id: 7,
+      title: "A War Economic Impact Analysis Dashboard",
+      category: "Data Analysis",
+      image: "https://s1.imgbb.ws/file/storage-sv1/xzzMx.png",
+      tags: ["Excel"],
+      liveLink: "https://www.linkedin.com/feed/update/urn:li:activity:7453331993976774656/",
+      githubLink: "#",
+      description: "Interactive data visualization and Economic Impact solution using Excel."
     }
   ];
 
