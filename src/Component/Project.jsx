@@ -76,6 +76,16 @@ const Project = () => {
       liveLink: "https://www.linkedin.com/feed/update/urn:li:activity:7453331993976774656/",
       githubLink: "#",
       description: "Interactive data visualization and Economic Impact solution using Excel."
+    },
+    {
+      id: 8,
+      title: "HR Analysis Dashboard",
+      category: "Data Analysis",
+      image: "https://s2.imgbb.ws/file/storage-sv2/9e7C8.png",
+      tags: ["Excel" , "Power Bi"],
+      liveLink: "https://drive.google.com/file/d/1vvLjtidw2dbP10-OwwDYH_dUwNqpyr6n/view?usp=drive_link",
+      githubLink: "#",
+      description: "Interactive data visualization and Employee Termination Impact solution using Power Bi."
     }
   ];
 
